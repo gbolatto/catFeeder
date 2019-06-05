@@ -28,11 +28,11 @@ int input;
 void loop() {
   if(HIGH == digitalRead(2)) {
     Serial.println("off");
-  } else {  // if tilt switch turns on open the door and then close after 150ms
+  } else {  // if tilt switch turns on open the door and then close after 250ms
     Serial.println("on");
     servo.write(60);  // opens the door
-    delay(150);
-    servo.write(150); // closes the door after 150ms
+    delay(250);
+    servo.write(150); // closes the door after 250ms
     delay(5000);  // delay 5 seconds so nothing happens upon repeatedly pressing
   }
 }
